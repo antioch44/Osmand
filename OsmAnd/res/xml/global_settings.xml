@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools">
+
+	<Preference
+		android:icon="@drawable/ic_world_globe_dark"
+		android:key="default_application_mode_string"
+		android:layout="@layout/preference_with_descr"
+		android:title="@string/settings_preset" />
+
+	<Preference
+		android:key="preferred_locale"
+		android:icon="@drawable/ic_action_map_language"
+		android:layout="@layout/preference_with_descr"
+		android:title="@string/preferred_locale" />
+
+	<Preference
+		android:key="external_storage_dir"
+		android:icon="@drawable/ic_action_folder"
+		android:layout="@layout/preference_with_descr"
+		android:title="@string/application_dir" />
+
+	<PreferenceCategory
+		android:key="privacy_and_security"
+		android:layout="@layout/simple_preference_category"
+		android:title="@string/application_profiles" />
+
+	<net.osmand.plus.settings.preferences.SwitchPreferenceEx
+		android:key="send_anonymous_data"
+		android:icon="@drawable/ic_action_privacy_and_security"
+		android:layout="@layout/preference_dialog_and_switch"
+		android:title="@string/analytics_pref_title" />
+
+	<SwitchPreference
+		android:key="do_not_show_startup_messages"
+		android:title="@string/start_up_message_pref"
+		android:icon="@drawable/ic_action_notification"
+		android:layout="@layout/preference_switch" />
+
+	<net.osmand.plus.settings.preferences.SwitchPreferenceEx
+		android:key="enable_proxy"
+		android:layout="@layout/preference_dialog_and_switch"
+		android:title="@string/proxy_pref_title" />
+
+</PreferenceScreen>
